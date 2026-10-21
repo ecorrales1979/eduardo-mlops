@@ -8,6 +8,13 @@ on:
 permissions:
   contents: write
 
+env:
+  MLFLOW_URI: ${{ vars.MLFLOW_URI }}
+  EXPERIMENT_NAME: ${{ vars.EXPERIMENT_NAME }}
+  AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+  AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+  AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
