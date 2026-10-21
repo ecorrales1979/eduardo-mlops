@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+env:
+  MLFLOW_URI: ${{ vars.MLFLOW_URI }}
+  EXPERIMENT_NAME: ${{ vars.EXPERIMENT_NAME }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
